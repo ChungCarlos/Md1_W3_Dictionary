@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="" id="string">
+<button type="button" onclick="transcript()">Search</button>
+<p id="result">Result</p>
+<script>
+    function transcript() {
+        let arrE = ["dog", "apple", "love", "book", "friend", "cat"];
+        let arrV = ["chó", "táo", "yêu", "sách", "bạn bè", "mèo"];
+        let string = document.getElementById("string").value;
+        let translate = 0;
+        let i;
+        let j;
+        let result = "";
+        for (i=0;i < arrE.length; i++) {
+            if (string == arrE[i]) {
+                translate = i;
+                for (j=0;j < arrV.length; j++) {
+                    if (translate == j) {
+                        result = arrV[j];
+                    }
+                }
+            }
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
